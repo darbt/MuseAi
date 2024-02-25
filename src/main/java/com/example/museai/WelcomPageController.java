@@ -91,7 +91,7 @@ public class WelcomPageController implements Initializable {
         Parent root;
 
         stage = (Stage) button_existing_login.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
 
         Scene scene = new Scene(root);
         stage.setScene(scene);

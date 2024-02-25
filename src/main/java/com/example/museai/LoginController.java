@@ -15,7 +15,7 @@ public class LoginController {
     @FXML
     private TextField passTF;
 
-    private static final String FILENAME = "users.csvs";
+    private static final String FILENAME = "users.csv";
 
     public void handleLoginBtn(){
         checkUsers();
