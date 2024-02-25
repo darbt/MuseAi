@@ -29,7 +29,7 @@
             <children>
                 <VBox fx:id="vBox_existing_fields" alignment="CENTER" prefHeight="400.0" prefWidth="272.0" spacing="15.0" GridPane.columnIndex="1">
                     <children>
-                        <MFXButton fx:id="button_existing_login" buttonType="RAISED" text="Login" />
+                        <MFXButton fx:id="button_existing_login" buttonType="RAISED" onAction="#handleLoginBtn" text="Login" />
                     </children>
                     <padding>
                         <Insets left="15.0" right="15.0" />
