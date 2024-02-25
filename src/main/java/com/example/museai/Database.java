@@ -41,7 +41,7 @@ public class Database {
             double acoust = Double.parseDouble(r.get("Acousticness"));
             double instrument = Double.parseDouble(r.get("Instrumentalness"));
             double live = Double.parseDouble(r.get("Liveness"));
-            double vale = Double.parseDouble(r.get("Valeness"));
+            double vale = Double.parseDouble(r.get("Valence"));
             double tempo = Double.parseDouble(r.get("Tempo"));
             int duration = Integer.parseInt(r.get("Duration_ms"));
             Song song = new Song(songName, artistName, popularity,dance,energy,key,loud,mode,speechiness,acoust,instrument,live,vale,tempo,duration);
@@ -49,7 +49,9 @@ public class Database {
 
 
         }
+
         return songList;
+
     }
 
 
