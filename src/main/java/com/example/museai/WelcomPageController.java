@@ -72,7 +72,7 @@ public class WelcomPageController implements Initializable {
     private VBox vBox_existing_fields, vBox_new_fields,
             vBox_existing_box, vBox_new_box;
 
-    private static final String FILENAME = "users.txt";
+    private static final String FILENAME = "users.csv";
 
     /**
      * Initializes the controller class & ComboBox.Account types combo box
