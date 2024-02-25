@@ -1,7 +1,10 @@
 package com.example.museai;
 
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -68,6 +71,8 @@ public class WelcomPageController implements Initializable {
     @FXML //declare VBoxs for animated menu
     private VBox vBox_existing_fields, vBox_new_fields,
             vBox_existing_box, vBox_new_box;
+
+    private static final String FILENAME = "users.txt";
 
     /**
      * Initializes the controller class & ComboBox.Account types combo box
@@ -181,6 +186,28 @@ public class WelcomPageController implements Initializable {
         showExisting.play();
         vBox_existing_fields.setVisible(false);
         vBox_existing_box.setVisible(false);
+
+    }
+
+    public void handleSignInBtn(){
+        String username = textField_new_email2.getText();
+        String password = textField_new_pass1.getText();
+        String verifiedpassword = textField_new_pass2.getText();
+
+        if (verifiedpassword.equals(password)) {
+            try (FileWriter fw = new FileWriter(FILENAME, true);
+                 BufferedWriter bw = new BufferedWriter(fw);
+                 PrintWriter out = new PrintWriter(bw)) {
+                out.println(username + "," + password);
+                System.out.println("User signed up successfully!");
+            } catch (IOException e) {
+                System.out.println("Error occurred while signing up.");
+                e.printStackTrace();
+            }
+        }
+        else {
+            System.out.println("Passwords don't match.");
+        }
 
     }
 
