@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.museai.WelcomPageController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="469.0" layoutX="-42.0" layoutY="-52.0" stroke="BLACK" strokeType="INSIDE" width="729.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="417.0" stroke="BLACK" strokeType="INSIDE" width="362.0" />
+        <GridPane alignment="CENTER" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="680.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="534.0" minWidth="10.0" prefWidth="322.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.0" percentWidth="50.0" prefWidth="317.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox fx:id="vBox_existing_fields" alignment="CENTER" prefHeight="400.0" prefWidth="272.0" spacing="15.0" GridPane.columnIndex="1">
+                    <children>
+                        <MFXButton fx:id="button_existing_login" buttonType="RAISED" text="Login" />
+                    </children>
+                    <padding>
+                        <Insets left="15.0" right="15.0" />
+                    </padding>
+                </VBox>
+                <VBox fx:id="vBox_new_fields" alignment="CENTER" spacing="15.0" visible="false">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="New Account" />
+                        <GridPane alignment="CENTER" hgap="20.0" maxHeight="-Infinity" prefHeight="200.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <VBox alignment="CENTER" spacing="15.0" GridPane.hgrow="ALWAYS">
+                                    <children>
+                                        <MFXTextField fx:id="textField_new_email2" floatMode="BORDER" floatingText="Username" maxWidth="1.7976931348623157E308" />
+                                        <MFXPasswordField fx:id="textField_new_pass1" floatMode="BORDER" floatingText="Password" maxWidth="1.7976931348623157E308" />
+                                        <MFXPasswordField fx:id="textField_new_pass2" floatMode="BORDER" floatingText="Re-type Password" maxWidth="1.7976931348623157E308" />
+                                    </children>
+                                </VBox>
+                            </children>
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                        </GridPane>
+                        <MFXButton fx:id="button_new_register" buttonType="RAISED" text="Register" />
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+        <Pane fx:id="pane_box">
+            <children>
+                <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="340.0" />
+                <VBox fx:id="vBox_existing_box" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="408.0" prefWidth="340.0" spacing="30.0">
+                    <children>
+                        <Text fill="#ff66f0" strokeType="OUTSIDE" strokeWidth="0.0" text="Muse" textAlignment="CENTER" wrappingWidth="175.53125">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </Text>
+                        <Text fill="#ff66e5" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome back!">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </Text>
+                        <MFXButton fx:id="button_newAccount" buttonType="RAISED" onAction="#showNew" text="Need an account?" />
+                    </children>
+                    <padding>
+                        <Insets top="70.0" />
+                    </padding>
+                </VBox>
+                <VBox fx:id="vBox_new_box" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="340.0" spacing="30.0" visible="false">
+                    <children>
+                        <Text fill="#ff59ca" strokeType="OUTSIDE" strokeWidth="0.0" text="Muse" textAlignment="CENTER" wrappingWidth="175.53125">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </Text>
+                        <Text fill="#ff55c9" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello new user!">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </Text>
+                        <MFXButton fx:id="button_existingAccount" buttonType="RAISED" onAction="#showExisting" text="Already have an account?" />
+                    </children>
+                    <padding>
+                        <Insets top="70.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

@@ -17,7 +17,4 @@ public class WelcomePageView extends Application {
         stage.show();
     }
 
-   // public static void main(String[] args) {
-     //   launch();
-    //}
 }

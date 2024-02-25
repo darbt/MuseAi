@@ -75,12 +75,7 @@ public class WelcomPageController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //initialize ComboBox options
-        String accountTypes[] = {"STUDENT", "PROFESSOR", "ADMIN"};
-        ObservableList<String> options = FXCollections.observableArrayList(accountTypes);
-        comboBox_new_type.setItems(options);
 
-        showExisting();
 
     }
 
