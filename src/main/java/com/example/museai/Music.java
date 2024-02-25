@@ -41,6 +41,6 @@ public class Music {
         return "Music{" +  "songName='" + songName + '\'' +
                 ", artistName='" + artistName + '\'' +
                 "genre='" + genre + '\'' +
-                '}';
+                "}\n";
     }
 }
