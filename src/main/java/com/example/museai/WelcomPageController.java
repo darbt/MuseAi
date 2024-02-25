@@ -19,13 +19,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.LineTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 
@@ -75,8 +79,18 @@ public class WelcomPageController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+    }
 
+    public void handleLoginBtn() throws IOException{
+        Stage stage;
+        Parent root;
 
+        stage = (Stage) button_existing_login.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void showExisting() {
