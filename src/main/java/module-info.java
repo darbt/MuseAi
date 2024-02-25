@@ -1,6 +1,7 @@
 module com.example.museai {
     requires javafx.controls;
     requires javafx.fxml;
+    requires MaterialFX;
 
     requires org.controlsfx.controls;
 
