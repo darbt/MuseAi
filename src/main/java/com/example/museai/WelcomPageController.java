@@ -3,7 +3,7 @@ package com.example.museai;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class WelcomPageController {
     @FXML
     private Label welcomeText;
 
