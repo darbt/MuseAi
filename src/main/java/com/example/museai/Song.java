@@ -117,6 +117,14 @@ public class Song {
         acousticness = acousticness;
     }
 
+    public double getInstrument() {
+        return instrument;
+    }
+
+    public void setInstrument(double instrument) {
+        this.instrument = instrument;
+    }
+
     public double getLiveness() {
         return liveness;
     }
