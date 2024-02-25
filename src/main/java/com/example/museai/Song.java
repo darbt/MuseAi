@@ -11,16 +11,36 @@ public class Song {
     private double loudness;
     private int mode;
     private double speechiness;
-    private double Acousticness;
+    private double acousticness;
+    private double instrument;
     private double liveness;
     private double valence;
     private double tempo;
     private int duration;
 
+
+
+    public Song(String songName, String artistName, int popularity, double danceability, double energy, int key, double loudness, int mode, double speechiness, double acousticness, double instrument, double liveness, double valence, double tempo, int duration) {
+        this.songName = songName;
+        this.artistName = artistName;
+        this.popularity = popularity;
+        this.danceability = danceability;
+        this.energy = energy;
+        this.key = key;
+        this.loudness = loudness;
+        this.mode = mode;
+        this.speechiness = speechiness;
+        this.acousticness = acousticness;
+        this.instrument = instrument;
+        this.liveness = liveness;
+        this.valence = valence;
+        this.tempo = tempo;
+        this.duration = duration;
+    }
+
     public double getEnergy() {
         return energy;
     }
-
     public void setEnergy(double energy) {
         this.energy = energy;
     }
@@ -90,11 +110,11 @@ public class Song {
     }
 
     public double getAcousticness() {
-        return Acousticness;
+        return acousticness;
     }
 
     public void setAcousticness(double acousticness) {
-        Acousticness = acousticness;
+        acousticness = acousticness;
     }
 
     public double getLiveness() {
@@ -127,5 +147,26 @@ public class Song {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "songName='" + songName + '\'' +
+                ", artistName='" + artistName + '\'' +
+                ", popularity=" + popularity +
+                ", danceability=" + danceability +
+                ", energy=" + energy +
+                ", key=" + key +
+                ", loudness=" + loudness +
+                ", mode=" + mode +
+                ", speechiness=" + speechiness +
+                ", acousticness=" + acousticness +
+                ", instrument=" + instrument +
+                ", liveness=" + liveness +
+                ", valence=" + valence +
+                ", tempo=" + tempo +
+                ", duration=" + duration +
+                '}';
     }
 }
