@@ -7,10 +7,10 @@ public class Genre {
     Database d = new Database();
 
 
-    public String getGenre() throws IOException {
-        ArrayList<Song> songList = d.readDatabase();
+    public String getGenre(Song s) throws IOException {
+
         String genre = " ";
-        for (Song s : songList) {
+
             double dance = s.getDanceability();
             double energy = s.getEnergy();
             double a = s.getAcousticness();
@@ -31,7 +31,7 @@ public class Genre {
                 genre= "Country";
             }
 
-        }
+
         return genre;
 
     }

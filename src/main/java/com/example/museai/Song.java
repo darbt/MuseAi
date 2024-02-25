@@ -2,8 +2,8 @@ package com.example.museai;
 
 public class Song {
 
-    private String songName;
-    private String artistName;
+    protected String songName;
+    protected String artistName;
     private int popularity;
     private double danceability;
     private double energy;
